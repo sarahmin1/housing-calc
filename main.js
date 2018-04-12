@@ -25,10 +25,16 @@ $(document).ready(function () {
 			var borough = parseFloat($(this).val());
 			var savings = income - (rent + expenses + loans);
 			var years = borough / (savings * 12);
+			var months = (years * 12);
+
 			// How many years it will take the user to buy a house
-			$(".years").find("span").text(years);
-
+			if(years < 1){
+				$(".years").find(".time_length").text(months);
+				$(".years").find(".time_unit").text("months");
+			} else{
+				$(".years").find(".time_length").text(years);
+				$(".years").find(".time_unit").text("years");
+			}
 		});
-
 	});
 });
