@@ -27,7 +27,7 @@ $(document).ready(function () {
 			var years = borough / (savings * 12);
 			var months = (years * 12);
 
-			// How many years it will take the user to buy a house
+			// How long it will take the user to buy a house in months and years//
 			if(years < 1){
 				$(".years").find(".time_length").text(months);
 				$(".years").find(".time_unit").text("months");
@@ -35,6 +35,8 @@ $(document).ready(function () {
 				$(".years").find(".time_length").text(years);
 				$(".years").find(".time_unit").text("years");
 			}
+
+			$(".years").addClass("active");
 		});
 	});
 });

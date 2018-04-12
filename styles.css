@@ -55,6 +55,14 @@ input {
   display: block;
 }
 
+.years{
+  display: none;
+}
+
+.years.active{
+  display: block;
+}
+
 /* Tablet/Desktop overrides */
 
 @media(min-width: 681px) {
