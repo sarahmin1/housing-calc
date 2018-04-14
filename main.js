@@ -1,8 +1,4 @@
 $(document).ready(function () {
-
-
-
-
 	// $("input").on("keyup keydown keypress change", function (e) {
 	// 	var income = parseFloat($(".income").val());
 	// "var savings = income - (rent + expenses + loans);"
@@ -15,7 +11,7 @@ $(document).ready(function () {
 		var loans = parseFloat($(".loans").val());
 		var expenses = parseFloat($(".expenses").val());
 
-
+		//variables
 		var brooklyn = 226000,
 			bronx = 78875,
 			queens = 187000,
@@ -25,10 +21,30 @@ $(document).ready(function () {
 			var borough = parseFloat($(this).val());
 			var savings = income - (rent + expenses + loans);
 			var years = borough / (savings * 12);
-			// How many years it will take the user to buy a house
-			$(".years").find("span").text(years);
+			var months = (years * 12);
 
+			// How long it will take the user to buy a house in months and years//
+			//if one is greater than years use months to determine outcome//
+			if (years < 1) {
+				$(".years").find(".time_length").text(months);
+				$(".years").find(".time_unit").text("months");
+			} else {
+				$(".years").find(".time_length").text(years);
+				$(".years").find(".time_unit").text("years");
+			}
+
+			if (years < 0) {
+				alert("Sorry, no home");
+			} else if (years < 1) {
+				$(".years").find(".time_length").text(months);
+				$(".years").find(".time_unit").text("months");
+			} else {
+				$(".years").find(".time_length").text(years);
+				$(".years").find(".time_unit").text("years");
+			}
+
+			//this makes "years and months" show up after it calculates everything//
+			$(".years").addClass("active");
 		});
-
 	});
 });

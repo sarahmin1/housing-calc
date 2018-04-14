@@ -19,6 +19,7 @@ You will find this is far easier than the opposite task of using CSS to cram you
 html, body {
   /* Sets default font-size to 16px, ensuring 1em = 16px; */
   font-size: 16px;
+  font-family: sans-serif
 }
 
 h1 {
@@ -31,6 +32,12 @@ h1 {
 
 .container {
   max-width: 980px;
+  margin: 0 auto;
+  padding: 1em;
+}
+
+.text {
+  max-width: 700px;
   margin: 0 auto;
   padding: 1em;
 }
@@ -52,6 +59,14 @@ td, th {
 
 input {
   max-width: 100%;
+  display: block;
+}
+
+.years {
+  display: none;
+}
+
+.years.active {
   display: block;
 }
 
