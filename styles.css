@@ -62,11 +62,19 @@ input {
   display: block;
 }
 
+<<<<<<< HEAD
 .years {
   display: none;
 }
 
 .years.active {
+=======
+.years{
+  display: none;
+}
+
+.years.active{
+>>>>>>> 2ab9a41119664da87142ab0fbb21c1094b887c95
   display: block;
 }
 
