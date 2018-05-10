@@ -18,7 +18,7 @@ You will find this is far easier than the opposite task of using CSS to cram you
 
 html, body {
   /* Sets default font-size to 16px, ensuring 1em = 16px; */
-  font-size: 16px;
+  font-size: 22px;
   font-family: sans-serif
 }
 
@@ -26,20 +26,45 @@ h1 {
   font-size: 2.5em;
 }
 
+h2, h3, h4 {
+  font-family: 'Libre Franklin', sans-serif;
+  color: #00008b;
+}
+
+figcaption {
+  font-family: 'Libre Franklin', sans-serif;
+  font-size: .75em;
+}
+
 .headline {
-  text-transform: uppercase;
+  font-family: 'Bevan', cursive;
+}
+
+.subhead {
+  font-family: 'Libre Franklin', sans-serif;
+  color: black;
+}
+
+.calculator {
+  font-family: 'Libre Franklin', sans-serif;
+  padding-top: 10px;
+  max-width: 75%;
+  margin: 0 auto;
+  display: block;
 }
 
 .container {
   max-width: 980px;
   margin: 0 auto;
   padding: 1em;
+  padding-bottom: 100px;
 }
 
 .text {
   max-width: 700px;
   margin: 0 auto;
-  padding: 1em;
+  font-family: 'Source Serif Pro', serif;
+  padding-top: 30px;
 }
 
 div.student {
@@ -62,32 +87,25 @@ input {
   display: block;
 }
 
-<<<<<<< HEAD
-.years {
+<<<<<<< HEAD .years {
   display: none;
 }
 
 .years.active {
-=======
-.years{
-  display: none;
-}
-
-.years.active{
->>>>>>> 2ab9a41119664da87142ab0fbb21c1094b887c95
-  display: block;
-}
-
-/* Tablet/Desktop overrides */
-
-@media(min-width: 681px) {
-  /* Any adjustments for tablets and larger go here. Note these styles will be applied to anything 681px or larger -- so tablet AND desktop */
-  td, th {
-    width: auto;
-    display: table-cell;
+  =======.years {
+    display: none;
   }
-}
-
-@media(min-width: 729px) {
-  /* Any adjustments for desktop and larger go here. Note these styles will be applied to anything 729px or larger -- so desktop */
-}
+  .years.active {
+    >>>>>>>2ab9a41119664da87142ab0fbb21c1094b887c95 display: block;
+  }
+  /* Tablet/Desktop overrides */
+  @media(min-width: 681px) {
+    /* Any adjustments for tablets and larger go here. Note these styles will be applied to anything 681px or larger -- so tablet AND desktop */
+    td, th {
+      width: auto;
+      display: table-cell;
+    }
+  }
+  @media(min-width: 729px) {
+    /* Any adjustments for desktop and larger go here. Note these styles will be applied to anything 729px or larger -- so desktop */
+  }
